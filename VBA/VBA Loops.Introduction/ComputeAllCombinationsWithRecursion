@@ -1,0 +1,78 @@
+'Advanced - Compute all Combinations with recursion
+'https://www.vitoshacademy.com/vba-all-combinations/
+
+Sub Main()
+    
+    Dim size As Long: size = 4
+    Dim initialArray As Variant: initialArray = Array(1, 2, 3, 4, 5, 6)
+    Dim arr As Variant: ReDim arr(size - 1)
+    Dim n As Long: n = UBound(arr) + 1
+    
+    EmbeddedLoops 0, size, initialArray, n, arr
+    
+End Sub
+
+Function EmbeddedLoops(index As Long, size As Long, initialArray As Variant, n As Long, arr As Variant)
+    
+    Dim p As Variant
+    
+    If index >= size Then
+        If Not AnyValueBiggerThanNext(arr) And Not AnyValueIsRepeated(arr) Then
+            PrintArrayOnSingleLine arr
+        End If
+    Else
+        For Each p In initialArray
+            arr(index) = p
+            EmbeddedLoops index + 1, size, initialArray, n, arr
+        Next p
+    End If
+    
+End Function
+
+Public Function AnyValueBiggerThanNext(arr As Variant) As Boolean
+
+    Dim i As Long
+    For i = LBound(arr) To UBound(arr) - 1
+        If arr(i) > arr(i + 1) Then
+            AnyValueBiggerThanNext = True
+            Exit Function
+        End If
+    Next i
+    
+    AnyValueBiggerThanNext = False
+
+End Function
+
+Public Function AnyValueIsRepeated(arr As Variant) As Boolean
+            
+    On Error GoTo AnyValueIsRepeated_Error:
+    
+    Dim element As Variant
+    Dim testCollection As New Collection
+    
+    For Each element In arr
+        testCollection.Add "item", CStr(element)
+    Next element
+    
+    AnyValueIsRepeated = False
+    
+    On Error GoTo 0
+    Exit Function
+    
+AnyValueIsRepeated_Error:
+    AnyValueIsRepeated = True
+    
+End Function
+
+Public Sub PrintArrayOnSingleLine(myArray As Variant)
+
+    Dim i As Long
+    Dim textArray As String
+    
+    For i = LBound(myArray) To UBound(myArray)
+        textArray = textArray & myArray(i)
+    Next i
+    
+    Debug.Print textArray
+    
+End Sub
