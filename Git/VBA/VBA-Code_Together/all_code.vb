@@ -5,12 +5,18 @@ Option Explicit
 
 Option Explicit
 
-Sub LoopingFrom0to100()
+Sub LoopingTwiceFrom0to100()
 
     Dim i As Long
-    For i = 0 To 100
-        tblSomething.Cells(i + 1, 1) = i + i
-    Next i
+    Dim j As Long
+    
+    For j = 0 To 1
+        For i = 0 To 100
+            tblSomething.Cells(i + 1, j + 1) = i + j
+        Next i
+    Next j
+    
+    
 End Sub
 Option Explicit
 
