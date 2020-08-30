@@ -1,18 +1,28 @@
-VBA Loops. Introduction.
+# VBA Loops. Introduction.
 
-Type of loops
-. For Loop
-. Do Until
-. Do While
-. While Do
+### Video Link:
 
-Basics
-. Step 2 (or more)
-. Reversed For Loop
-. Nested Loop
+<div align="left">
+      <a href="https://www.youtube.com/watch?v=5yLzZikS15k">
+            <img src="https://img.youtube.com/vi/5yLzZikS15k/0.jpg" alt="VBA Loops." style="width:100%;">
+      </a>
+</div>
 
-Loops in Excel
-. Loop through Cells in Range
-. Loop with offset
+### Contents:
+-  Type of loops
+    - For Loop
+    - Do Until
+    - Do While
+    - While Do
 
-. Quite Advanced - Compute all Combinations with recursion
+- Basics
+  - Step 2 (or more)
+  - Reversed For Loop
+  - Nested Loop
+
+- Loops in Excel
+  - Loop through Cells in Range
+  - Loop with offset
+
+- Quite Advanced 
+  - Compute all Combinations with recursion
