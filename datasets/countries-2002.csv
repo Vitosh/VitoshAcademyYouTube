@@ -1,4 +1,4 @@
-code,name,continent,region,surface_area,independence_year,population,life_expectancy,gnp,gnp_old,local_name,government_form,head_of_state,capital,code2
+code,name,continent,region,surface_area,independence_year,population,life_expectancy,gnp,gnp_old,local_name,government_form,head_of_state,city_id,code2
 ABW,Aruba,North America,Caribbean,193,NULL,103000,78.4,828,793,Aruba,Nonmetropolitan Territory of The Netherlands,Willem-Alexander,129,AW
 AFG,Afghanistan,Asia,Southern and Central Asia,652090,1919,22720000,45.9,5976,NULL,Afganistan/Afqanestan,Islamic Emirate,Mohammad Omar,1,AF
 AGO,Angola,Africa,Central Africa,1246700,1975,12878000,38.3,6648,7984,Angola,Republic,Jose Eduardo dos Santos,56,AO
